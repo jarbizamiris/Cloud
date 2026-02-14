@@ -14,6 +14,9 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
+  # Agregando el access y el secret key, terraform se podra conectar a nuestra cuenta de AMAZON
+  access_key = var.access_key
+  secret_key = var.secret_key
   default_tags {
     tags = var.tags
   }
